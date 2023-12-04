@@ -173,8 +173,10 @@ def yearly_data(file):
     plt.title("Snowfall of January")
     plt.plot(years, jan, label="Snowfall (in)")
     jan_trend = jan_x * years + jan_int
+    jan_trend_lab = round(np.polyfit(years, jan, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, jan_trend, linewidth=2, label=f"Snowfall trend")
+    plt.plot(years, jan_trend, linewidth=2,
+             label=f"Snowfall trend: {jan_trend_lab}")
     plt.axhline(jan_m, color='r', linestyle='--', label=f"Mean: {jan_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -186,8 +188,10 @@ def yearly_data(file):
     plt.title("Snowfall of February")
     plt.plot(years, feb, label="Snowfall (in)")
     feb_trend = feb_x * years + feb_int
+    feb_trend_lab = round(np.polyfit(years, feb, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, feb_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, feb_trend, linewidth=2,
+             label=f"Snowfall trend:{feb_trend_lab}")
     plt.axhline(feb_m, color='r', linestyle='--', label=f"Mean: {feb_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -199,8 +203,10 @@ def yearly_data(file):
     plt.title("Snowfall of March")
     plt.plot(years, mar, label="Snowfall (in)")
     march_trend = mar_x * years + mar_int
+    march_trend_lab = round(np.polyfit(years, mar, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, march_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, march_trend, linewidth=2,
+             label=f"Snowfall trend:{march_trend_lab}")
     plt.axhline(mar_m, color='r', linestyle='--', label=f"Mean: {mar_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -212,8 +218,10 @@ def yearly_data(file):
     plt.title("Snowfall of April")
     plt.plot(years, apr, label="Snowfall (in)")
     apr_trend = apr_x * years + apr_int
+    apr_trend_lab = round(np.polyfit(years, apr, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, apr_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, apr_trend, linewidth=2,
+             label=f"Snowfall trend:{apr_trend_lab}")
     plt.axhline(apr_m, color='r', linestyle='--', label=f"Mean: {apr_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -225,8 +233,10 @@ def yearly_data(file):
     plt.title("Snowfall of May")
     plt.plot(years, may, label="Snowfall (in)")
     may_trend = may_x * years + may_int
+    may_trend_lab = round(np.polyfit(years, may, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, may_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, may_trend, linewidth=2,
+             label=f"Snowfall trend:{may_trend_lab}")
     plt.axhline(may_m, color='r', linestyle='--', label=f"Mean: {may_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -238,8 +248,10 @@ def yearly_data(file):
     plt.title("Snowfall of June")
     plt.plot(years, jun, label="Snowfall (in)")
     jun_trend = jun_x * years + jun_int
+    jun_trend_lab = round(np.polyfit(years, jun, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, jun_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, jun_trend, linewidth=2,
+             label=f"Snowfall trend:{jun_trend_lab}")
     plt.axhline(jun_m, color='r', linestyle='--', label=f"Mean: {jun_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -251,8 +263,10 @@ def yearly_data(file):
     plt.title("Snowfall of July")
     plt.plot(years, jul, label="Snowfall (in)")
     jul_trend = jul_x * years + jul_int
+    jul_trend_lab = round(np.polyfit(years, jul, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, jul_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, jul_trend, linewidth=2,
+             label=f"Snowfall trend:{jul_trend_lab}")
     plt.axhline(jul_m, color='r', linestyle='--', label=f"Mean: {jul_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -264,8 +278,10 @@ def yearly_data(file):
     plt.title("Snowfall of August")
     plt.plot(years, aug, label="Snowfall (in)")
     aug_trend = aug_x * years + aug_int
+    aug_trend_lab = round(np.polyfit(years, aug, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, aug_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, aug_trend, linewidth=2,
+             label=f"Snowfall trend:{aug_trend_lab}")
     plt.axhline(aug_m, color='r', linestyle='--', label=f"Mean: {aug_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -277,8 +293,10 @@ def yearly_data(file):
     plt.title("Snowfall of September")
     plt.plot(years, sep, label="Snowfall (in)")
     sep_trend = sep_x * years + sep_int
+    sep_trend_lab = round(np.polyfit(years, sep, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, sep_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, sep_trend, linewidth=2,
+             label=f"Snowfall trend:{sep_trend_lab}")
     plt.axhline(sep_m, color='r', linestyle='--', label=f"Mean: {sep_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -290,8 +308,10 @@ def yearly_data(file):
     plt.title("Snowfall of October")
     plt.plot(years, oct, label="Snowfall (in)")
     oct_trend = oct_x * years + oct_int
+    oct_trend_lab = round(np.polyfit(years, oct, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, oct_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, oct_trend, linewidth=2,
+             label=f"Snowfall trend:{oct_trend_lab}")
     plt.axhline(oct_m, color='r', linestyle='--', label=f"Mean: {oct_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -303,8 +323,10 @@ def yearly_data(file):
     plt.title("Snowfall of November")
     plt.plot(years, nov, label="Snowfall (in)")
     nov_trend = nov_x * years + nov_int
+    nov_trend_lab = round(np.polyfit(years, nov, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, nov_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, nov_trend, linewidth=2,
+             label=f"Snowfall trend:{nov_trend_lab}")
     plt.axhline(nov_m, color='r', linestyle='--', label=f"Mean: {nov_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
@@ -316,8 +338,10 @@ def yearly_data(file):
     plt.title("Snowfall of December")
     plt.plot(years, dec, label="Snowfall (in)")
     dec_trend = dec_x * years + dec_int
+    dec_trend_lab = round(np.polyfit(years, dec, 1)[0], 3)
     plt.xticks(ticks=years, labels=years_raw, rotation=45)
-    plt.plot(years, dec_trend, linewidth=2, label="Snowfall trend")
+    plt.plot(years, dec_trend, linewidth=2,
+             label=f"Snowfall trend:{dec_trend_lab}")
     plt.axhline(dec_m, color='r', linestyle='--', label=f"Mean: {dec_m}")
     plt.grid(True)
     plt.legend(loc="upper left")
