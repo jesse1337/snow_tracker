@@ -35,8 +35,7 @@ def plot_snowfall():
     plt.plot(months, snowfall, label="Average Snowfall")
     plt.xlabel("Months")
     plt.ylabel("Snowfall (cm)")
-    plt.title("Monthly Snowfall")
-
+    plt.title("Average Monthly Snowfall(2015-Present)")
     plt.grid(True)
     plt.savefig("static/images/snowfall.png")
 
@@ -45,7 +44,7 @@ def plot_snowdays():
     plt.figure(figsize=(16, 9))
     plt.xlabel("Months")
     plt.ylabel("Snowy days")
-    plt.title("Monthly Snowfall")
+    plt.title("Average Number of Snowy Days Per Month(2015-Present)")
     plt.plot(months, snowdays, label="Average Snowy Days")
     plt.grid(True)
     plt.savefig("static/images/snow_days.png")
