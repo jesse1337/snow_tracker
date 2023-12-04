@@ -1,5 +1,9 @@
 # snow_tracker
 
+# API key for worldweatheronline.com: c0b015941064404da9a224932230212
+
+# Make sure to activate conda environment (conda activate cs122)
+
 Snow tracker for Tahoe
 
 Project Title:
@@ -19,5 +23,5 @@ Data Collection and Storage Plan:
 For our data collection, we'll use an online API in order to get data from previous years. For the data, we plan to use https://www.nohrsc.noaa.gov/ 's GIS Data Sets, specifically: Snow Information on Skiing Locations; it provides a .gz file, which we will read.
 As for storing the data, we will be transferring it to our own .txt file, where we can format it however we like, and search for specific days easily.
 
-Data Analysis and Visualization Plan:
-We will be using several Python libraries, such as pandas and matplotlib to clean and analyze the data. Using this data, we will plot and visualize the data points to predict future levels of snow in the same timeframe.
+Data Analysis and Visualization Plan
+A .gitignore file and a license
