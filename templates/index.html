@@ -15,10 +15,10 @@
     <h3>
         This website shows the historical tracking of snow levels in South Lake Tahoe (one of the most popular spots for ski resorts). 
     </h3>
-    <h3>Click the button above the view details about snow levels for each month.
+    <h3>Click the button above the view details about snow levels for each month, or click the graphs below to view details.
 
     </h3>
-    <img src="static/images/snowfall.png">
+    <img src="static/images/snowfall.png" id="snowfallimg">
     <h3>
         This graph shows the average snowfall levels in cm in South Lake Tahoe from the year 2015 onwards. The month with the highest snowfall level is <b>December</b>. The months of June through September have little to <b>no snowfall</b>.
     </h3>
@@ -26,14 +26,82 @@
     <h3>
         This graph shows the average snowy days per month. The month with the highest snowy days are <b>March</b> and <b>December</b>
     </h3>
-    <img src="static/images/snow_days.png">
+    <img src="static/images/snow_days.png" id="snowdaysimg">
 
+    <div id="pop_up1" class="popup">
+        <div class="popup_content">
+            <span class="close close1">&times;</span>
+            <p>Snowfall Averages per Month</p>
+            <p>January: 92.7 cm</p>
+            <p>February: 86.4 cm</p>
+            <p>March: 96.6 cm</p>
+            <p>April: 38.4 cm</p>
+            <p>May: 10.1 cm</p>
+            <p>June: 0.0 cm</p>
+            <p>July: 0.0 cm</p>
+            <p>August: 0.0 cm</p>
+            <p>September: 0.1 cm</p>
+            <p>October: 7.9 cm</p>
+            <p>November: 40.4 cm</p>
+            <p><b>December: 109.0 cm</b></p>
+            
+        </div>
+    </div>
+
+    <div id="pop_up2" class="popup">
+        <div class="popup_content">
+            <span class="close close2">&times;</span>
+            <p>Snow Day Averages per Month</p>
+            <p>January: 8 days</p>
+            <p>February: 9 days</p>
+            <p><b>March: 10 days</b></p>
+            <p>April: 7 days</p>
+            <p><May: 8 days</p>
+            <p>June: 5 days</p>
+            <p>July: 4 days</p>
+            <p>August: 4 days</p>
+            <p>September: 3 days</p>
+            <p>October: 3 days</p>
+            <p>November: 6 days</p>
+            <p><b>December: 10 days</b></p>
+            
+        </div>
+    </div>
+    <script>
+        var popup1 = document.getElementById("pop_up1");
+        var popup2 = document.getElementById("pop_up2");
+        var img1 = document.getElementById("snowfallimg");
+        var img2 = document.getElementById("snowdaysimg")
+        var span1 = document.getElementsByClassName("close1")[0];
+        var span2 = document.getElementsByClassName("close2")[0];
+
+        img1.onclick = function(){
+            popup1.style.display = "block";
+        }
+        img2.onclick = function() {
+            popup2.style.display = "block";
+        }
+        span1.onclick = function() {
+            popup1.style.display = "none";
+        }
+        span2.onclick = function() {
+            popup2.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == popup1) {
+                popup1.style.display = "none";
+            }
+            else if (event.target == popup2) {
+                popup2.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
-
-
-
 <style>
+    body {
+        background-color: rgb(236, 236, 236)
+    }
     h1 {
         text-align:center;
         font-size:45px;
@@ -49,7 +117,11 @@
     max-width: 90%;
     height: auto;
     }
+    img:hover {
+        cursor:pointer;
+    }
     h3 {
+
         text-align: center;
         font-weight: normal;
         font-size:25px;
@@ -58,7 +130,7 @@
         padding-right:100px;
     }
     button{
-        background-color: #9cd8d3; /* Green */
+        background-color: #4d94ff;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -66,7 +138,51 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        cursor:pointer;
         
     }
+    button:hover {
+        background-color: #3d74c6;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    .popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+    }
+
+    .popup_content {
+        background-color: #fefefe;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30%;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
 </style>
 </html>

@@ -4,9 +4,10 @@ import json
 import calendar
 import numpy as np
 
+# Writes data into json file
+
 
 def data_json(file_name, data):
-    """Save data to a JSON file."""
     with open(file_name, 'w') as f:
         json.dump(data, f, indent=4)
 
